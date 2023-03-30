@@ -1,0 +1,64 @@
+.main {
+    width: 640px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    margin-inline: auto;
+    margin-top: 4.375em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    padding: 0 1em;
+}
+
+.main__allCryptoBtn,
+.main__favoritesBtn {
+    width: 320px;
+    height: 50px;
+    background-color: #3A52F0;
+    border-radius: 10px 0 0 10px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    border: 1px solid black;
+    color: white;
+    cursor: pointer;
+}
+
+.main__allCryptoBtn:hover {
+    background-color: white;
+    color: black;
+}
+
+.main__favoritesBtn {
+    border-radius: 0 10px 10px 0;
+    background-color: white;
+    color: black;
+}
+
+.main__favoritesBtn:hover {
+    background-color: black;
+    color: white;
+}
+
+
+@media(max-width:648px) {
+    .main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+        margin-top: 40px;
+    }
+
+    .main__allCryptoBtn,
+    .main__favoritesBtn {
+        border-radius: 10px;
+        margin-top: 2em;
+        width: 100%;
+        max-width: 213.3px;
+    }
+}

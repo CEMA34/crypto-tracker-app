@@ -1,0 +1,160 @@
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    height: 500px;
+    padding: 0 1em;
+}
+
+.mainContainer {
+    height: calc(100% - 50px);
+    overflow-y: scroll;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    transition: opacity 0.5s;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    padding: 1em 0;
+}
+
+.main h2,
+.detailsLink {
+    font-size: 14px;
+    width: 120px;
+    font-weight: 500;
+}
+
+.detailsLink {
+    color: #A3A6C2;
+    font-weight: 700;
+}
+
+.detailsLink:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.main__coin {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.main__coin__coinIcon {
+    width: 40px;
+    height: 40px;
+}
+
+.main__coin__starIcon {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    bottom: 70px;
+    cursor: pointer;
+}
+
+.hr {
+    max-width: 1024px;
+    opacity: 20%;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 600px;
+}
+
+.inputContainer__select,
+.inputContainer__searchInput {
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    color: #A3A6C2;
+    border: 1px solid #A3A6C2;
+    outline: none;
+    padding: 1em;
+    margin: 0 auto;
+    font-size: 12px;
+    position: absolute;
+    top: -140px;
+    border-radius: 10px;
+    margin: 0 1em;
+}
+
+.inputContainer__searchInput {
+    left: 0;
+}
+
+.inputContainer__searchInput::placeholder {
+    color: #A3A6C2;
+    font-size: 12px;
+}
+
+.main__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(max-width:648px) {
+    .container{
+        margin-bottom: 18em;
+    }
+    .inputContainer {
+        flex-direction: column;
+    }
+
+    .inputContainer__select {
+        right: 0;
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .inputContainer__searchInput {
+        flex-direction: column;
+    }
+
+    .inputContainer__select,
+    .inputContainer__searchInput {
+        position: static;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .inputContainer__searchInput{
+        margin: 5em 0 3em 0
+    }
+
+    .inputContainer__select {
+        margin-bottom: 3em;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .main__coin {
+        width: 100%;
+        max-width: 175px;
+    }
+
+    .main__coin__starIcon {
+        bottom: 230px;
+    }
+
+    .main h2 {
+        text-align: center;
+    }
+
+}

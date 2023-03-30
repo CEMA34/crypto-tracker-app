@@ -1,0 +1,78 @@
+.container {
+    max-width: 1024px;
+    margin-inline: auto;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    height: 500px;
+}
+
+.mainContainer{
+    height: calc(100% - 50px);
+    overflow-y: scroll;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    transition-duration: 0.5s;
+    text-decoration: none;
+    color: black;
+    position: relative;
+    padding: 1em 0;
+}
+
+.main h2 {
+    font-size: 14px;
+    width: 120px;
+    font-weight: 500;
+}
+
+.main__coin {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.main__coin__coinIcon {
+    width: 40px;
+    height: 40px;
+}
+
+.hr {
+    max-width: 1024px;
+    opacity: 20%;
+}
+
+.main:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+
+@media(max-width:648px) {
+   
+    .container{
+        height: 100vh;
+        margin-top: 5em;
+    }
+  
+
+    .main {
+        flex-direction: column;
+    }
+
+
+    .main h2 {
+        text-align: center;
+    }
+
+    .main__coin {
+        width: 100%;
+        max-width: 120px;
+        text-align: left;
+    }
+
+}

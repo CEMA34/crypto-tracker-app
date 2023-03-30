@@ -1,0 +1,36 @@
+.main {
+    display: flex;
+    max-width: 1024px;
+    margin-inline: auto;
+    justify-content: space-between;
+    margin-top: 170px;
+    font-family: 'Montserrat', sans-serif;
+    color: #A3A6C2;
+    padding: 0 1em;
+}
+
+.main h2 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    width: 120px;
+}
+
+.main__coinTitle{
+ width: 200px;   
+}
+
+.hr {
+    max-width: 1024px;
+    opacity: 20%;
+}
+
+@media(max-width:648px) {
+    .main{
+        display: none;
+    }
+
+    .hr{
+        display: none;
+    }
+}
