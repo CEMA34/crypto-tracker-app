@@ -1,19 +1,23 @@
 import styles from "./news.module.css";
-import { Context } from "/components/Context";
-import { useContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion"
 
 export default function News() {
 
-    const newsData = useContext(Context)
-
-    const [news, setNews] = useState(newsData.news);
+    const [news, setNews] = useState([]);
 
     useEffect(() => {
-        setNews(newsData.news);
-    }, [newsData]);
+        async function fetchNews() {
+            const res = await fetch('/api/news')
+            const data = await res.json()
+            console.log(data)
+            setNews(data.articles)
+        }
+        fetchNews()
+    }, []);
 
+    
 
     return (
         <div className={styles.container}>
