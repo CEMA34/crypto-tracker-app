@@ -19,7 +19,7 @@ export default function News() {
         <div className={styles.container}>
             <div className={styles.mainContainer}>
                 <h1 className={styles.title}>Crypto News</h1>
-                {news.map((article) => (
+                {news && news.map((article) => (
                     <motion.div initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1}}
                         transition={{ type: "spring", stiffness: 50, damping: 20 }}

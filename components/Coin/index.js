@@ -108,7 +108,7 @@ export default function Coin() {
                     </select>
                 </div>
                 <div className={styles.mainContainer}>
-                    {results.map((coin) => {
+                    {results && results.map((coin) => {
                         const price = Number(coin.price).toFixed(2);
                         return (
                             <div key={coin.uuid}>
